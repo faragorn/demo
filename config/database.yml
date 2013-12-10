@@ -15,7 +15,7 @@ development:
   database: demo_app_farrukh
   pool: 5
   username: root
-  password: maxfar1990
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
