@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+</head>
+<body>
+<h2>Welcome to <%= @site_name %>!</h2>
+<p>
+  You have successfully signed up to <%=  @site_name %>,
+  your login Id is: <%= @user.email %>. <br/>
+</p>
+<p>
+  To finish your registration process please follow this link: <%= @url %>.
+</p>
+<p>Thanks for joining our team!</p>
+</body>
+</html>

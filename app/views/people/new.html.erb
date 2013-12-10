@@ -1,0 +1,20 @@
+<div class="container">
+  <%= form_for @person, :as => :person, :url => complete_registration_path(@person), :html => { :class => 'form-signin'}, :method => :post do |p| %>
+      <h2 class="form-signin-heading">Personal Information</h2>
+      <%= p.text_field :first_name, :class => 'form-control', :placeholder => 'first name' %>
+      <%= show_field_error(@person, :first_name) %>
+      <%= p.text_field :last_name, :class => 'form-control', :placeholder => 'last name' %>
+      <%= show_field_error(@person, :last_name) %>
+      <%= p.text_field :address, :class => 'form-control', :placeholder => 'address' %>
+      <%= show_field_error(@person, :address) %>
+      <%= p.text_field :city, :class => 'form-control', :placeholder => 'city' %>
+      <%= show_field_error(@person, :city) %>
+      <%= p.select :province, options_for_select([['Ontario', 'Ontario'],['Quebec','Quebec'],['Alberta', 'Alberta']]),{}, {:class => 'form-control'} %>
+      <%= show_field_error(@person, :province) %>
+      <%= p.text_field :postal_code, :class => 'form-control', :placeholder => 'postal code' %>
+      <%= show_field_error(@person, :postal_code) %>
+      <%= p.text_field :phone_number, :class => 'form-control', :placeholder => 'phone_number' %>
+      <%= show_field_error(@person, :phone_number) %>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
+  <% end %>
+</div>

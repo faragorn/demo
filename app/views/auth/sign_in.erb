@@ -1,0 +1,15 @@
+<div class="container">
+ <!-- <form class="form-signin" role="form"> -->
+  <%= form_for @user, :as => :user, :url => sign_in_path(@user), :html => { :class => 'form-signin'} do |u| %>
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <!--<input type="text" class="form-control" placeholder="Email address" required autofocus>-->
+    <%= u.email_field :email, :class => 'form-control', :placeholder => 'e-mail' %>
+    <!--<input type="password" class="form-control" placeholder="Password" required>-->
+    <%= u.password_field :password, :class => 'form-control', :placeholder => 'password' %>
+    <label class="checkbox">
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <% end %>
+  <!-- </form> -->
+</div>

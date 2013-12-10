@@ -1,0 +1,30 @@
+
+  <% if @vehicles.empty? %>
+  No vehicles to display
+  <% else %>
+      <table class="table table-striped">
+        <thead>
+        <th>License Plate</th>
+        <th>Colour</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        </thead>
+        <tbody>
+          <% @vehicles.each do |v| %>
+            <tr>
+              <td><%= v.license_plate %></td>
+              <td><%= v.colour %></td>
+              <td><%= v.make %></td>
+              <td><%= v.model %></td>
+              <td><%= v.year %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+  <% end %>
+
+
+<p>
+  <%= link_to 'Add Vehicle', new_vehicle_path %>
+</p>
